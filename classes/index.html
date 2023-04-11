@@ -4,37 +4,28 @@
 
 <script>
 
-    var currentYear = 2025;
-    document.write("Juan tiene " + (currentYear - 2000) + " años");
-    document.write("<br>");
-    document.write("<br>");
-    document.write("Pedro tiene " + (currentYear - 1995) + " años");
-    document.write("<br>");
-    document.write("<br>");
-    document.write("<hr>")
-    currentYear = 2030;
-    document.write("Carlos tiene " + (currentYear - 2005) + " años");
-    document.write("<br>");
-    document.write("<br>");
-    document.write("Carlos tiene " + (currentYear - 1996) + " años");
-    document.write("<br>");
-    document.write("<br>");
-    document.write("<hr>")
-    currentYear = 2020;
-    document.write("Maria tiene " + (currentYear - 2003) + " años");
-    document.write("<br>");
-    document.write("<br>");
-    document.write("Elizabeth tiene " + (currentYear - 1997) + " años");
-    document.write("<br>");
-    document.write("<br>");
-    document.write("Paula tiene " + (currentYear - 2002) + " años");
-    document.write("<br>");
-    document.write("<br>");
+    // Get current year
+    let currentTime = new Date();
+    let year = currentTime.getFullYear();
 
-    var nombreUno = "Maria", nombreDos = "Elizabeth", nombreTres = "Paula";
-    var edadUno = 17, edadDos = 23, edadTres = 18;
-    var promedio = (edadUno + edadDos + edadTres) / 3;
+    function lineBreaks(){
+        document.write("<br>");
+        document.write("<br>");
+    }
 
-    document.write(`El promedio de las edades de ${nombreUno}, ${nombreDos} y ${nombreTres} es : ${Math.round(promedio)}`)
+    // Get current age (current year - year of birth)
+    function printPhrase(firstName, yearBirth){
+        document.write(`${firstName} is (${year} - ${yearBirth}) years old`);
+        lineBreaks();
+    }
+
+    document.write("Juan is " + (year - 2000) + " years old");
+    lineBreaks();
+
+    document.write("Pedro is " + (year - 1995) + " years old");
+    lineBreaks();
+
+    document.write("Carlos is " + (year - 2005) + " years old");
+    lineBreaks();
 
 </script>
