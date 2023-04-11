@@ -15,17 +15,12 @@
 
     // Get current age (current year - year of birth)
     function printPhrase(firstName, yearBirth){
-        document.write(`${firstName} is (${year} - ${yearBirth}) years old`);
+        document.write(`${firstName} is ${year - yearBirth} years old`);
         lineBreaks();
     }
 
-    document.write("Juan is " + (year - 2000) + " years old");
-    lineBreaks();
-
-    document.write("Pedro is " + (year - 1995) + " years old");
-    lineBreaks();
-
-    document.write("Carlos is " + (year - 2005) + " years old");
-    lineBreaks();
+    printPhrase("Carlos", 1999);
+    printPhrase("Juan", 2002);
+    printPhrase("Pedro", 1990);
 
 </script>
