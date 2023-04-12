@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age difference</title>
+  </head>
+  <body>
+    <h1>Our age difference is</h1>
+
+    <script>
+      // Get current year
+      let currentTime = new Date();
+      let year = currentTime.getFullYear();
+
+      function lineBreaks() {
+        document.write("<br>");
+        document.write("<br>");
+      }
+
+      function printPhrase(myBirthYear, theyBirthYear) {
+        let myAge = year - myBirthYear, theyAge = year - theyBirthYear;
+        let ageDifference = myAge - theyAge;
+
+        
+        document.write(`I'm ${myAge} years old`);
+        lineBreaks();
+        document.write(`He's ${theyAge} years old`);
+        lineBreaks();
+        
+        if(ageDifference < 0) {
+            document.write(`The difference is ${ageDifference * -1}`);
+        }else {
+            document.write(`The difference is ${ageDifference}`);
+        }
+      }
+
+      printPhrase(1999, 1988);
+
+    </script>
+  </body>
+</html>
