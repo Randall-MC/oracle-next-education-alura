@@ -1,12 +1,13 @@
-# Lógica de programación: Primeros pasos
+# La tecnología es para todos
 
-Realice este curso para Lógica de programación y:
+ONE es un programa de educación y empleabilidad con el objetivo social de formar personas en tecnología y conectarlas con el mercado laboral a través de a través de empresas colaboradoras.
 
-- De sus primeros pasos de manera práctica con el lenguaje JavaScript
-- Comience en el fascinante mundo de programación usando solo su navegador
-- Entienda las variables y funciones y para qué sirven
-- Cree programas y practique con problemas del día a día
-- Coloque sus conocimientos en práctica automatizando actividades repetitivas
+El curso es 100% online y completamente gratuito, diseñado para quienes no tuvieron acceso a una educación de calidad y quieren transformar su realidad social.
 
-> **Christian Velasco**  
-> *Ingeniero Industrial*
+El programa abre inscripciones 3 veces al año. Cada clase completa una jornada de 6 meses, dividido en 4 rutas disponibles en la plataforma; en total, hay más de 560 horas de contenido.
+
+
+***Aún no sé que escribir en este README, seguramente escribiré algo cuando haya finalizado con el programa. Mietras ese día llega este será el README temporal***
+
+> Randall
+
