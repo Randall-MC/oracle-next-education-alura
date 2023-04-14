@@ -1,26 +1,34 @@
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    
+    <h1>Calcula tu IMC</h1>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
 
-<h1>Programa</h1>
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
 
-<script>
+        function calcularIMC(nombre, peso, altura) {
+            let imc = peso / (altura * altura);
+            imprimir(`El <b>IMC</b> de ${nombre} es: ${imc}`);
+        }
 
-    // Get current year
-    let currentTime = new Date();
-    let year = currentTime.getFullYear();
+        calcularIMC("Juan José", 72, 1.69);
+        
+    </script>
 
-    function lineBreaks(){
-        document.write("<br>");
-        document.write("<br>");
-    }
-
-    // Get current age (current year - year of birth)
-    function printPhrase(firstName, yearBirth){
-        document.write(`${firstName} is ${year - yearBirth} years old`);
-        lineBreaks();
-    }
-
-    printPhrase("Carlos", 1999);
-    printPhrase("Juan", 2002);
-    printPhrase("Pedro", 1990);
-
-</script>
+</body>
+</html>
