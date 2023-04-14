@@ -10,23 +10,23 @@
     
     <h1>Calcula tu IMC</h1>
     <script>
+
         function saltarLinea() {
             document.write("<br>");
             document.write("<br>");
             document.write("<br>");
         }
 
-        function imprimir(frase) {
-            document.write(frase);
+        function calcularIMC(peso, altura) {
+            return peso / (altura * altura);
+        }
+
+        function imprimir(nombre, peso, altura) {
+            document.write(`El IMC de ${nombre} es: ${calcularIMC(peso, altura)}`);
             saltarLinea();
         }
 
-        function calcularIMC(nombre, peso, altura) {
-            let imc = peso / (altura * altura);
-            imprimir(`El <b>IMC</b> de ${nombre} es: ${imc}`);
-        }
-
-        calcularIMC("Juan José", 72, 1.69);
+        imprimir("Juan José", 72, 1.69);
         
     </script>
 
