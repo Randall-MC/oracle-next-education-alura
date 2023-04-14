@@ -22,11 +22,16 @@
         }
 
         function imprimir(nombre, peso, altura) {
-            document.write(`El IMC de ${nombre} es: ${calcularIMC(peso, altura)}`);
+            document.write(`${nombre} su <strong>IMC</strong> es: ${calcularIMC(peso, altura)}`);
             saltarLinea();
         }
 
-        imprimir("Juan José", 72, 1.69);
+        let nombre = prompt("Ingrese su nombre");
+        let peso = prompt(`${nombre} ingrese su peso`);
+        let altura = prompt(`${nombre} ingrese su altura`);
+
+        imprimir(nombre, peso, altura);
+
         
     </script>
 
