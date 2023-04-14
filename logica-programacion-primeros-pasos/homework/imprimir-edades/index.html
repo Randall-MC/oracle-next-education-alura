@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haz lo que hicimos en el aula</title>
+</head>
+<body>
+
+<script>
+
+    // Get current year
+    let currentTime = new Date();
+    let year = currentTime.getFullYear();
+    
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(nombre, nacimiento) {
+        document.write(`<big> La edad de ${nombre} es de ${year - nacimiento} </big>`);
+        saltarLinea();
+    }
+
+    imprimir("Juan", 1999);
+    imprimir("Pedro", 2003);
+    imprimir("Carlos", 2010);
+    imprimir("Pablo", 1995);
+
+</script>
+
+</body>
+</html>
