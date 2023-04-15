@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial FIFA</title>
+</head>
+<body>
+    <h1>Año mundial FIFA</h1>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+        
+        // Get current year
+        let currentTime = new Date();
+        let year = currentTime.getFullYear();
+
+        let mundialFIFA = 1930;
+        while (mundialFIFA < year) {
+            imprimir("Hubo mundial de la FIFA en el año " + mundialFIFA);
+            mundialFIFA+= 4;
+        }
+    </script>
+</body>
+</html>
