@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puedes conducir</title>
+    <h1>¿Será que puedes conducir?</h1>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let edad = random(1, 50);
+        let decision = random(0, 1);
+
+        if (edad >= 18 && decision == 1) {
+            imprimir("Puedes conducir");
+        } else {
+            imprimir("No puedes conducir");
+        }
+
+        imprimir("Edad de la persona " + edad);
+        if (decision) {
+            imprimir("¿Tiene licencia? <strong>Si</strong>");
+        } else {
+            imprimir("¿Tiene licencia? <strong>No</strong>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

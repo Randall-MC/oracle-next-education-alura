@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    
+    <h1>Calcula tu IMC</h1>
+    <script>
+
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function calcularImc(peso, altura) {
+            return peso / (altura * altura);
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        let nombre = prompt("Ingrese su nombre");
+        let pesoPersona = parseInt(prompt("Ingrese su peso (kg)"));
+        let alturaPersona = parseFloat(prompt("Ingrese su altura (m)"));
+        let imc = calcularImc(pesoPersona, alturaPersona);
+
+        imprimir(nombre + " su IMC es " + imc);
+
+        if (imc < 18.5) {
+            imprimir("Bajo peso");
+        }
+        if (imc >= 18.5 && imc < 25) {
+            imprimir("Adecuado peso");
+        }
+        if (imc >= 25 && imc < 30) {
+            imprimir("Sobrepeso");
+        }
+        if (imc >= 30 && imc < 35) {
+            imprimir("Obesidad grado 1");
+        }
+        
+    </script>
+
+</body>
+</html>

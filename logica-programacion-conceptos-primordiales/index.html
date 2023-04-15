@@ -25,6 +25,16 @@
         let totalPuntos = (victorias * 3) + empates;
 
         imprimir(`El total de puntos es ${totalPuntos}`);
+
+        let puntosAnteriores = 25;
+
+        if (totalPuntos > puntosAnteriores) {
+            imprimir("El equipo está mejor que el año pasado");
+        } else if (totalPuntos < puntosAnteriores) {
+            imprimir("El equipo está peor que el año pasado");
+        } else {
+            imprimir("El equipo está igual que el año pasado");
+        }
     </script>
 </body>
 </html>

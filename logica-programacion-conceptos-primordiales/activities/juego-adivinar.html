@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar</title>
+</head>
+<body>
+    <h1>Adivina el número</h1>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        let numeroAleatorio = Math.round(Math.random() * 10);
+        let numeroUsuario = parseInt(prompt("Ingrese un número entre 0 - 10"));
+
+        if (numeroAleatorio == numeroUsuario) {
+            imprimir("Usted acertó, el número era: " + numeroAleatorio);
+        } else {
+            imprimir("Error, el número era: " + numeroAleatorio);
+        }
+    </script>
+</body>
+</html>
