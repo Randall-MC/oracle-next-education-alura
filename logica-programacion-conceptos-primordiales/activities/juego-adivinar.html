@@ -18,14 +18,24 @@
             document.write(frase);
             saltarLinea();
         }
+        function getRandomNumber(maxNumber) {
+            return Math.round(Math.random() * (maxNumber - 0) + 0);
+        }
 
-        let numeroAleatorio = Math.round(Math.random() * 10);
-        let numeroUsuario = parseInt(prompt("Ingrese un número entre 0 - 10"));
+        let limite = 8;
+        let numeroAleatorio = getRandomNumber(limite);
+        let numeroUsuario = parseInt(prompt("Ingrese un número entre 0 - " + limite));
 
         if (numeroAleatorio == numeroUsuario) {
             imprimir("Usted acertó, el número era: " + numeroAleatorio);
+        } else if (numeroAleatorio < numeroUsuario) {
+            imprimir("Error, el número era menor");
+            imprimir("Número aleatorio " + numeroAleatorio);
+            imprimir("Número ingresado " + numeroUsuario);
         } else {
-            imprimir("Error, el número era: " + numeroAleatorio);
+            imprimir("Error, el número era mayor");
+            imprimir("Número aleatorio " + numeroAleatorio);
+            imprimir("Número ingresado " + numeroUsuario);
         }
     </script>
 </body>
