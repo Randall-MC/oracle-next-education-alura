@@ -9,5 +9,5 @@ El programa abre inscripciones 3 veces al año. Cada clase completa una jornada 
 
 ***Aún no sé que escribir en este README, seguramente escribiré algo cuando haya finalizado con el programa. Mietras ese día llega este será el README temporal***
 
-> Randall
+> Yo merengues
 
