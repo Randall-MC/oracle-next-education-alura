@@ -18,25 +18,33 @@
             document.write(frase);
             saltarLinea();
         }
-        function getRandomNumber(maxNumber) {
-            return Math.round(Math.random() * (maxNumber - 0) + 0);
+        function getRandomNumber(maxNumber, minNumber) {
+            return Math.round(Math.random() * (maxNumber - minNumber) + minNumber);
         }
 
-        let limite = 8;
-        let numeroAleatorio = getRandomNumber(limite);
-        let numeroUsuario = parseInt(prompt("Ingrese un número entre 0 - " + limite));
+        let numeroMinimo = 1;
+        let numeroMaximo = 10;
+        let numeroAleatorio = getRandomNumber(numeroMaximo, numeroMinimo);
+        let numeroUsuario;
+        let intentos = 3;
+        let contador = 1;
 
-        if (numeroAleatorio == numeroUsuario) {
-            imprimir("Usted acertó, el número era: " + numeroAleatorio);
-        } else if (numeroAleatorio < numeroUsuario) {
-            imprimir("Error, el número era menor");
-            imprimir("Número aleatorio " + numeroAleatorio);
-            imprimir("Número ingresado " + numeroUsuario);
-        } else {
-            imprimir("Error, el número era mayor");
-            imprimir("Número aleatorio " + numeroAleatorio);
-            imprimir("Número ingresado " + numeroUsuario);
+        while (contador <= intentos) {
+            numeroUsuario = parseInt(prompt("Ingrese un número entre " + numeroMinimo + " - " + numeroMaximo));
+            if (numeroAleatorio === numeroUsuario) {
+                alert("Usted acertó, el número es: " + numeroAleatorio);
+                imprimir("Haz adivinado el número en el intento " + contador);
+                break;
+            } else if (numeroAleatorio < numeroUsuario) {
+                alert("Error, el número es menor");
+            } else {
+                alert("Error, el número es mayor");
+            }
+            contador++;
         }
+
+        imprimir("Número aleatorio " + numeroAleatorio);
+        imprimir("Número ingresado " + numeroUsuario);
     </script>
 </body>
 </html>

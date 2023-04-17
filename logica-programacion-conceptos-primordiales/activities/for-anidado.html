@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For</title>
+</head>
+<body>
+    <h1>Ciclo for anidado</h1>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+        }
+        function imprimir(frase) {
+            document.write(frase);
+        }
+
+        for (let columna = 1; columna <= 5; columna++) {
+            for (let fila = 1; fila <= 10; fila++) {
+                imprimir("*");
+            }
+            saltarLinea();
+        }
+    </script>
+</body>
+</html>
