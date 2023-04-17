@@ -8,43 +8,50 @@
 </head>
 <body>
     <h1>Adivina el número</h1>
-    <script>
+
+    <input>
+    <button>Comparar</button>
+
+    <script>        
         function saltarLinea() {
             document.write("<br>");
             document.write("<br>");
             document.write("<br>");
         }
+        
         function imprimir(frase) {
             document.write(frase);
             saltarLinea();
         }
-        function getRandomNumber(maxNumber, minNumber) {
-            return Math.round(Math.random() * (maxNumber - minNumber) + minNumber);
+
+        function getRandomNumber() {
+            return Math.round(Math.random() * 10);
         }
-
-        let numeroMinimo = 1;
-        let numeroMaximo = 10;
-        let numeroAleatorio = getRandomNumber(numeroMaximo, numeroMinimo);
-        let numeroUsuario;
-        let intentos = 3;
-        let contador = 1;
-
-        while (contador <= intentos) {
-            numeroUsuario = parseInt(prompt("Ingrese un número entre " + numeroMinimo + " - " + numeroMaximo));
-            if (numeroAleatorio === numeroUsuario) {
+        
+        function comprobar() {
+            if (numeroAleatorio === parseInt(input.value)) {
                 alert("Usted acertó, el número es: " + numeroAleatorio);
                 imprimir("Haz adivinado el número en el intento " + contador);
-                break;
-            } else if (numeroAleatorio < numeroUsuario) {
+                imprimir("Número aleatorio " + numeroAleatorio);
+            } else if (numeroAleatorio < parseInt(input.value)) {
                 alert("Error, el número es menor");
             } else {
                 alert("Error, el número es mayor");
             }
-            contador++;
-        }
 
-        imprimir("Número aleatorio " + numeroAleatorio);
-        imprimir("Número ingresado " + numeroUsuario);
+            contador++;
+            input.value = "";
+            input.focus();
+        }
+        
+        let input = document.querySelector("input");
+        let button = document.querySelector("button");
+        let numeroAleatorio = getRandomNumber();
+        let intentos = 3;
+        let contador = 1;
+        
+        input.focus();
+        button.onclick = comprobar;
     </script>
 </body>
 </html>
