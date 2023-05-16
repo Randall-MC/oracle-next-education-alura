@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <h1>Utilizando funciones en Canvas</h1>
+    <canvas width="600" height="400">
+
+    </canvas>
+    <script>
+
+        function cuadrado(x, y, color) {            
+            let pantalla = document.querySelector("canvas");
+            let pincel = pantalla.getContext("2d");
+    
+            pincel.fillStyle = color;
+            pincel.fillRect(x,y,50,50);
+
+            // Agregar bordes a la figura
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(x,y,50,50);
+        }
+
+        cuadrado(0, 0, "green");
+        cuadrado(0, 50, "yellow");
+        cuadrado(0, 100, "red");
+
+    </script>
+</body>
+</html>
